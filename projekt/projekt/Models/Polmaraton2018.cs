@@ -23,6 +23,8 @@ namespace projekt.Models
         public TimeSpan Wynik { get; set; }
         public string M { get; set; }
         public string K { get; set; }
+        public virtual ICollection<Uczestnicy> Uczestnicies
+        { get; set; }
 
     }
   

@@ -20,6 +20,12 @@ namespace projekt.Models
         public int Wynik_2016 { get; set; }
         public int Wynik_2015 { get; set; }
         public int Wynik_2014 { get; set; }
+        public virtual Polmaraton2014 Polmaraton2014 { get; set; }
+        public virtual Polmaraton2015 Polmaraton2015 { get; set; }
+        public virtual Polmaraton2016 Polmaraton2016 { get; set; }
+        public virtual Polmaraton2017 Polmaraton2017 { get; set; }
+        public virtual Polmaraton2018 Polmaraton2018 { get; set; }
+
 
     }
 }
