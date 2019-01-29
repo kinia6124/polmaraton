@@ -15,4 +15,5 @@ namespace projekt.Models
         public string Kraj { get; set; }
         public DateTime Data_urodzenia { get; set; }
     }
+  
 }
