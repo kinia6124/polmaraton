@@ -141,6 +141,7 @@
     <Compile Include="Models\Polmaraton2016.cs" />
     <Compile Include="Models\Polmaraton2017.cs" />
     <Compile Include="Models\Polmaraton2018.cs" />
+    <Compile Include="Models\Uczestnicy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
