@@ -7,7 +7,7 @@ namespace projekt.Models
 {
     public class Uczestnicy
     {
-        public int ID_zaw { get; set; }
+        public int ID { get; set; }
         public string Imie { get; set; }
         public string Nazwisko { get; set; }
         public string Miasto { get; set; }

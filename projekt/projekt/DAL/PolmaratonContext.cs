@@ -8,7 +8,7 @@ using projekt.Models;
 
 namespace projekt.DAL
 {
-    public class PolmaratonContext :DbContext
+    public class PolmaratonContext : DbContext
     { 
         public PolmaratonContext():base("PolmaratonContext")
         {

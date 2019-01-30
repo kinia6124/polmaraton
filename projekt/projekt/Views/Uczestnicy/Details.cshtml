@@ -1,0 +1,114 @@
+﻿@model projekt.Models.Uczestnicy
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Uczestnicy</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Imie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Imie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nazwisko)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nazwisko)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Miasto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Miasto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Klub)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Klub)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kraj)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kraj)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data_urodzenia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data_urodzenia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plec)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wynik_2018)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wynik_2018)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wynik_2017)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wynik_2017)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wynik_2016)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wynik_2016)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wynik_2015)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wynik_2015)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wynik_2014)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wynik_2014)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
