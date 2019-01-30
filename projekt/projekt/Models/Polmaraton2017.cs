@@ -18,12 +18,12 @@ namespace projekt.Models
             public DateTime Data_urodzenia { get; set; }
             public string Kat_wiek { get; set; }
             public string Plec { get; set; }
-            public TimeSpan Tempo { get; set; }
-            public TimeSpan Ptk_1 { get; set; }
-            public TimeSpan Ptk_2 { get; set; }
-            public TimeSpan Wynik { get; set; }
-            public string M { get; set; }
-            public string K { get; set; }
+            public double Tempo { get; set; }
+            public double Ptk_1 { get; set; }
+            public double Ptk_2 { get; set; }
+            public double Wynik { get; set; }
+            public int M { get; set; }
+            public int K { get; set; }
         public virtual ICollection<Uczestnicy> Uczestnicies
         { get; set; }
 
