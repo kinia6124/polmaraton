@@ -1,14 +1,31 @@
 ﻿@model IEnumerable<projekt.Models.Polmaraton2017>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Półmaraton 2017";
 }
 
-<h2>Index</h2>
+<h2>Półmaraton 2017</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<br />
+<table>
+    <tr>
+        <td>Wyszukaj Uczestnika po Nazwisku: </td>
+        <td width="15"></td>
+        <td>
+            <form action=text>
+                <input type="text" name="nazwa">
+            </form>
+        </td>
+        <td width="15"></td>
+        <td>
+            <form action=przycisk>
+                <input type="submit" value="Wyszukaj">
+            </form>
+        </td>
+    </tr>
+</table>
+
+<br />
 <table class="table">
     <tr>
         <th>
@@ -18,7 +35,7 @@
             @Html.DisplayNameFor(model => model.Imie)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Nazwisko)
+            @Html.ActionLink("Nazwisko", "Index", new { sortOrder = ViewBag.NameSortParm })
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Miasto)
@@ -48,7 +65,7 @@
             @Html.DisplayNameFor(model => model.Ptk_2)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Wynik)
+            @Html.ActionLink("Wynik", "Index", new { sortOrder = ViewBag.NameSortParm })
         </th>
         <th>
             @Html.DisplayNameFor(model => model.M)
@@ -59,59 +76,182 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+    @*<tr>
+        <td align="center">
+            3
+        </td>
+        <td>
+            Betty
+        </td>
+        <td>
+            Chepleting
+        </td>
+        <td>
+            Nairobi
+        </td>
+        <td>
+            Benedek Team
+        </td>
+        <td>
+            Kenia
+        </td>
+        <td align="center">
+            1988
+        </td>
+        <td align="center">
+            K20
+        </td>
+        <td align="center">
+            K
+        </td>
+        <td align="center">
+            3.21
+        </td>
+        <td align="center">
+            15.42
+        </td>
+        <td align="center">20.12</td>
+        <td align="center">35.54</td>
+        <td align="center"></td>
+        <td align="center">1</td>
+
+    </tr>*@
     <tr>
+        <td align="center">1</td>
         <td>
-            @Html.DisplayFor(modelItem => item.ID_zaw)
+            Olena
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Imie)
+            Burkowska
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Nazwisko)
+            Kijów
         </td>
+        <td></td>
         <td>
-            @Html.DisplayFor(modelItem => item.Miasto)
+            Ukraina
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Klub)
+        <td align="center">
+            1981
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Kraj)
+        <td align="center">
+            K30
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Data_urodzenia)
+        <td align="center">
+            K
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Kat_wiek)
+        <td align="center">
+            3.43
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Plec)
+        <td align="center">
+            16.22
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tempo)
+        <td align="center">
+            21.30
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ptk_1)
+        <td align="center">
+            37.52
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ptk_2)
+        <td align="center">
+            
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Wynik)
+        <td align="center">
+            2
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.M)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.K)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
+
     </tr>
-}
+    @*<tr>
+        <td align="center">
+            2
+        </td>
+        <td>
+            Andrzej
+        </td>
+        <td>
+            Rogiewicz
+        </td>
+        <td>
+            Grudziądz
+        </td>
+        <td>
+            Pac Man Team
+        </td>
+        <td>
+            Polska
+        </td>
+        <td align="center">
+            1993
+        </td>
+        <td align="center">
+            M20
+        </td>
+        <td align="center">M</td>
+        <td align="center">
+            4.27
+        </td>
+        <td align="center">
+            17.21
+        </td>
+        <td align="center">24.18</td>
+        <td align="center">41.39</td>
+        <td align="center">1</td>
+        <td align="center"></td>
+
+    </tr>*@
+
+    @*@foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID_zaw)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Imie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nazwisko)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Miasto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Klub)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kraj)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data_urodzenia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kat_wiek)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Plec)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tempo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ptk_1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ptk_2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Wynik)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.M)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.K)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+                </td>
+            </tr>
+        }*@
 
 </table>

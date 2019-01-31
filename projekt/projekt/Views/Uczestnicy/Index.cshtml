@@ -1,14 +1,28 @@
 ﻿@model IEnumerable<projekt.Models.Uczestnicy>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Uczestnicy";
 }
 
-<h2>Index</h2>
+<h2>Uczestnicy</h2>
+<br/>
+<table>
+    <tr>
+        <td>Wyszukaj Uczestnika po Nazwisku: </td>
+        <td width="15"></td>
+        <td>
+            <form action=text>
+                <input type="text" name="nazwa">
+            </form>
+        </td>
+        <td width="15"></td>
+        <td><form action=przycisk>
+    <input type="submit" value="Wyszukaj">
+</form></td>
+    </tr>
+</table>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<br/>
 <table class="table">
     <tr>
 
@@ -50,51 +64,90 @@
         </th>
 
     </tr>
-
-@foreach (var item in Model) {
+  
+ 
     <tr>
+
         <td>
-            @Html.DisplayFor(modelItem => item.Imie)
+            Betty
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Nazwisko)
+            Chepleting
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Miasto)
+            Nairobi
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Klub)
+            Benedek Team
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Kraj)
+            Kenia
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Data_urodzenia)
+        <td align="center">
+            1988
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Plec)
+        <td align="center">
+            K
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Wynik_2018)
+        <td align="center">
+            2
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Wynik_2017)
+        <td align="center">
+            1
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Wynik_2016)
+        <td align="center">
+            1
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Wynik_2015)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Wynik_2014)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
+        <td align="center">1</td>
+        <td align="center">2</td>
+
     </tr>
-}
+    
+
+    @*@foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Imie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nazwisko)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Miasto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Klub)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kraj)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data_urodzenia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Plec)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Wynik_2018)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Wynik_2017)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Wynik_2016)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Wynik_2015)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Wynik_2014)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+                </td>
+            </tr>
+        }*@
 
 </table>
