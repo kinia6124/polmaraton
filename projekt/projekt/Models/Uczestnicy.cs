@@ -13,12 +13,7 @@ namespace projekt.Models
         public string Miasto { get; set; }
         public string Klub { get; set; }
         public string Kraj { get; set; }
-        public DateTime Data_urodzenia 
-        {
-            get => Data_urodzenia.ToString();   // nie działa konwersja, nie wiem jak to ogranąć zęby działało 
-            
-            set => DateTime.TryParse(value, out Data_urodzenia); 
-        }
+        public DateTime Data_urodzenia { get; set; }
         public string Plec { get; set; }
         public int Wynik_2018 { get; set; }
         public int Wynik_2017 { get; set; }

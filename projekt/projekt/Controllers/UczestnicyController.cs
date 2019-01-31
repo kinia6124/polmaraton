@@ -16,24 +16,27 @@ namespace projekt.Controllers
         private PolmaratonContext db = new PolmaratonContext();
 
         // GET: Uczestnicy
-        public ActionResult Index(string sortUcz)
+        public ActionResult Index(string sortOrder)
         {
-            
-            
-            ViewBag.DataUrSortParm = sortUcz == "Data urodzenia" ? "data_ur" : "Data Urodzenia";
-            var uczestnicy = from u in db.Uczestnicies
-                             select u;
-            switch (sortUcz)
+
+            ViewBag.NameSortParm = string.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            var uczestnicies = from s in db.Uczestnicies
+                             select s;
+            switch (sortOrder)
 
             {
-                case "Data urodzenia":
-                    uczestnicy = uczestnicy.OrderBy(u => u.Data_urodzenia);
+                case "name_desc":
+                    uczestnicies = uczestnicies.OrderByDescending(s => s.Nazwisko);
                     break;
-                case "data_ur":
-                    uczestnicy = uczestnicy.OrderByDescending(u => u.Data_urodzenia);
+                case "Date":
+                    uczestnicies = uczestnicies.OrderBy(s => s.Data_urodzenia);
+                    break;
+                case "date_desc":
+                    uczestnicies = uczestnicies.OrderByDescending(s => s.Data_urodzenia);
                     break;
                 default:
-                    uczestnicy = uczestnicy.OrderBy(u => u.Data_urodzenia);
+                    uczestnicies = uczestnicies.OrderBy(s => s.Nazwisko);
                     break;
             }
                     return View(db.Uczestnicies.ToList());

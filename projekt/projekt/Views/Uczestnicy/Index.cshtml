@@ -16,7 +16,7 @@
             @Html.DisplayNameFor(model => model.Imie)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Nazwisko)
+            @Html.ActionLink("Nazwisko", "Index", new { sortOrder = ViewBag.NameSortParm })
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Miasto)
@@ -28,7 +28,7 @@
             @Html.DisplayNameFor(model => model.Kraj)
         </th>
         <th>
-            @Html.ActionLink("Data urodzenia", "Index", new { sortUcz = ViewBag.DataUrSortParm })
+            @Html.ActionLink("Data urodzenia", "Index", new { sortOrder = ViewBag.DateSortParm })
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Plec)
