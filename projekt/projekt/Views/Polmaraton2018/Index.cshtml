@@ -1,0 +1,117 @@
+﻿@model IEnumerable<projekt.Models.Polmaraton2018>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_zaw)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Imie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nazwisko)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Miasto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Klub)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kraj)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data_urodzenia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kat_wiek)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plec)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tempo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ptk_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ptk_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Wynik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.M)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.K)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_zaw)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Imie)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nazwisko)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Miasto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Klub)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kraj)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data_urodzenia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kat_wiek)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plec)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tempo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ptk_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ptk_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Wynik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.M)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.K)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

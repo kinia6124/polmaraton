@@ -133,6 +133,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Polmaraton2014Controller.cs" />
+    <Compile Include="Controllers\Polmaraton2015Controller.cs" />
+    <Compile Include="Controllers\Polmaraton2016Controller.cs" />
+    <Compile Include="Controllers\Polmaraton2017Controller.cs" />
+    <Compile Include="Controllers\Polmaraton2018Controller.cs" />
     <Compile Include="Controllers\UczestnicyController.cs" />
     <Compile Include="DAL\PolmaratonContext.cs" />
     <Compile Include="DAL\PolmaratonInitializer.cs" />
@@ -190,6 +195,31 @@
     <Content Include="Views\Uczestnicy\Details.cshtml" />
     <Content Include="Views\Uczestnicy\Edit.cshtml" />
     <Content Include="Views\Uczestnicy\Index.cshtml" />
+    <Content Include="Views\Polmaraton2018\Create.cshtml" />
+    <Content Include="Views\Polmaraton2018\Delete.cshtml" />
+    <Content Include="Views\Polmaraton2018\Details.cshtml" />
+    <Content Include="Views\Polmaraton2018\Edit.cshtml" />
+    <Content Include="Views\Polmaraton2018\Index.cshtml" />
+    <Content Include="Views\Polmaraton2017\Create.cshtml" />
+    <Content Include="Views\Polmaraton2017\Delete.cshtml" />
+    <Content Include="Views\Polmaraton2017\Details.cshtml" />
+    <Content Include="Views\Polmaraton2017\Edit.cshtml" />
+    <Content Include="Views\Polmaraton2017\Index.cshtml" />
+    <Content Include="Views\Polmaraton2016\Create.cshtml" />
+    <Content Include="Views\Polmaraton2016\Delete.cshtml" />
+    <Content Include="Views\Polmaraton2016\Details.cshtml" />
+    <Content Include="Views\Polmaraton2016\Edit.cshtml" />
+    <Content Include="Views\Polmaraton2016\Index.cshtml" />
+    <Content Include="Views\Polmaraton2015\Create.cshtml" />
+    <Content Include="Views\Polmaraton2015\Delete.cshtml" />
+    <Content Include="Views\Polmaraton2015\Details.cshtml" />
+    <Content Include="Views\Polmaraton2015\Edit.cshtml" />
+    <Content Include="Views\Polmaraton2015\Index.cshtml" />
+    <Content Include="Views\Polmaraton2014\Create.cshtml" />
+    <Content Include="Views\Polmaraton2014\Delete.cshtml" />
+    <Content Include="Views\Polmaraton2014\Details.cshtml" />
+    <Content Include="Views\Polmaraton2014\Edit.cshtml" />
+    <Content Include="Views\Polmaraton2014\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
