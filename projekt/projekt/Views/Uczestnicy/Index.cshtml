@@ -11,6 +11,7 @@
 </p>
 <table class="table">
     <tr>
+
         <th>
             @Html.DisplayNameFor(model => model.Imie)
         </th>
@@ -27,7 +28,7 @@
             @Html.DisplayNameFor(model => model.Kraj)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Data_urodzenia)
+            @Html.ActionLink("Data urodzenia", "Index", new { sortUcz = ViewBag.DataUrSortParm })
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Plec)
@@ -47,7 +48,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Wynik_2014)
         </th>
-        <th></th>
+
     </tr>
 
 @foreach (var item in Model) {

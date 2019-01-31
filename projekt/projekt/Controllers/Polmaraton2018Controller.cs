@@ -16,9 +16,37 @@ namespace projekt.Controllers
         private PolmaratonContext db = new PolmaratonContext();
 
         // GET: Polmaraton2018
-        public ActionResult Index()
+        public ActionResult Index(string sortUcz2018)
         {
-            return View(db.Polmaraton2018s.ToList());
+            ViewBag.ImieSortParm = string.IsNullOrEmpty(sortUcz2018) ? "Imie" : "";
+            ViewBag.NazwiskoSortParm = string.IsNullOrEmpty(sortUcz2018) ? "Nazwisko" : "";
+            ViewBag.PlecSortParm = string.IsNullOrEmpty(sortUcz2018) ? "Plec" : "";
+            ViewBag.DataUrSortParm = sortUcz2018 == "Data urodzenia" ? "data_ur" : "Data Urodzenia";
+            var ucz_2018 = from u in db.Polmaraton2018s
+                             select u;
+            switch (sortUcz2018)
+
+            {
+                case "Imie":
+                    ucz_2018 = ucz_2018.OrderByDescending(u => u.Imie);
+                    break;
+                case "Nazwisko":
+                    ucz_2018 = ucz_2018.OrderByDescending(u => u.Nazwisko);
+                    break;
+                case "Plec":
+                    ucz_2018 = ucz_2018.OrderByDescending(u => u.Plec);
+                    break;
+                case "Data Urodzenia":
+                    ucz_2018 = ucz_2018.OrderBy(u => u.Data_urodzenia);
+                    break;
+                case "data_ur":
+                    ucz_2018 = ucz_2018.OrderByDescending(u => u.Data_urodzenia);
+                    break;
+                default:
+                    ucz_2018 = ucz_2018.OrderBy(u => u.Data_urodzenia);
+                    break;
+            }
+                    return View(db.Polmaraton2018s.ToList());
         }
 
         // GET: Polmaraton2018/Details/5

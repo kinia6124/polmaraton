@@ -18,25 +18,15 @@ namespace projekt.Controllers
         // GET: Uczestnicy
         public ActionResult Index(string sortUcz)
         {
-            ViewBag.ImieSortParm = string.IsNullOrEmpty(sortUcz) ? "Imie" : "";
-            ViewBag.NazwiskoSortParm = string.IsNullOrEmpty(sortUcz) ? "Nazwisko" : "";
-            ViewBag.PlecSortParm = string.IsNullOrEmpty(sortUcz) ? "Plec" : "";
+            
+            
             ViewBag.DataUrSortParm = sortUcz == "Data urodzenia" ? "data_ur" : "Data Urodzenia";
             var uczestnicy = from u in db.Uczestnicies
                              select u;
             switch (sortUcz)
 
             {
-                case "Imie":
-                    uczestnicy = uczestnicy.OrderByDescending(u => u.Imie);
-                    break;
-                case "Nazwisko":
-                    uczestnicy = uczestnicy.OrderByDescending(u => u.Nazwisko);
-                    break;
-                case "Plec":
-                    uczestnicy = uczestnicy.OrderByDescending(u => u.Plec);
-                    break;
-                case "Data Urodzenia":
+                case "Data urodzenia":
                     uczestnicy = uczestnicy.OrderBy(u => u.Data_urodzenia);
                     break;
                 case "data_ur":
